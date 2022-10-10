@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function play() {
+            //setTimeout executa uma função no intervalo informado, em milisgundos
+            //setTimeout(incrementar,3000);
+            setInterval(incrementar, 1000);
+        }
+        function parar(){
+            
+        }
+        function incrementar() {
+            let cont;
+            cont = document.getElementById("cont").innerHTML++
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <input type="button" value="play" onclick="play()">
+        <input type="button" value="parar" onclick="parar()">
+
+    </form>
+    <p>Contador: <span id="cont">0</span></p>
+
+</body>
+
+</html>
