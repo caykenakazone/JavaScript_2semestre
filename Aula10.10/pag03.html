@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +8,23 @@
     <title>Document</title>
 
     <script>
+            var cron1
         function play() {
             //setTimeout executa uma função no intervalo informado, em milisgundos
             //setTimeout(incrementar,3000);
-            setInterval(incrementar, 1000);
+            cron1 = setInterval(incrementar, 1000);
+            document.getElementById("btnPlay").disabled = true
+            document.getElementById("btnPause").disabled = false
+        }
+        function pausar(){
+            clearInterval(cron1)
         }
         function parar(){
-            
+
         }
         function incrementar() {
-            let cont;
-            cont = document.getElementById("cont").innerHTML++
+
+            let cont = document.getElementById("cont").innerHTML++
 
         }
 
@@ -27,8 +33,9 @@
 
 <body>
     <form action="">
-        <input type="button" value="play" onclick="play()">
-        <input type="button" value="parar" onclick="parar()">
+        <input type="button" value="play" id="btnPlay" onclick="play()">
+        <input type="button" value="parar" id="btnPause" onclick="pausar()" disabled>
+        <input type="button" value="stop" id="btnStop" onclick="stop()" disabled>
 
     </form>
     <p>Contador: <span id="cont">0</span></p>
