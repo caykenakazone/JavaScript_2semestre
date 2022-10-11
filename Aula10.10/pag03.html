@@ -8,38 +8,52 @@
     <title>Document</title>
 
     <script>
-            var cron1
-        function play() {
-            //setTimeout executa uma função no intervalo informado, em milisgundos
-            //setTimeout(incrementar,3000);
-            cron1 = setInterval(incrementar, 1000);
-            document.getElementById("btnPlay").disabled = true
-            document.getElementById("btnPause").disabled = false
-        }
-        function pausar(){
-            clearInterval(cron1)
-        }
-        function parar(){
+        var idCrono1;
 
-        }
-        function incrementar() {
+            function incrementar() {
+                cont = document.getElementById("cont").innerHTML++;
+            }
 
-            let cont = document.getElementById("cont").innerHTML++
+            function play() {
 
-        }
+                idCrono1 = setInterval(incrementar, 1000);
+                statusBtn(true, false, false);
+
+            }
+
+            function pausar() {
+
+                clearInterval(idCrono1);
+                statusBtn(false, true, false);
+
+            }
+
+            function parar() {
+
+                pausar();
+                document.getElementById('cont').innerHTML = `0`;
+                statusBtn(false, true, true);
+
+            }
+
+            function statusBtn(statusPlay, statusPause, statusParar) {
+
+                document.getElementById('btnPlay').disabled = statusPlay;
+                document.getElementById('btnPause').disabled = statusPause;
+                document.getElementById('btnParar').disabled = statusParar;
+
+            }
 
     </script>
 </head>
 
 <body>
     <form action="">
-        <input type="button" value="play" id="btnPlay" onclick="play()">
-        <input type="button" value="parar" id="btnPause" onclick="pausar()" disabled>
-        <input type="button" value="stop" id="btnStop" onclick="stop()" disabled>
-
+        <input type="button" value="Play" id="btnPlay" onclick="play()">
+        <input type="button" value="Pause" id="btnPause" onclick="pausar()" disabled>
+        <input type="button" value="Parar" id="btnParar" onclick="parar()" disabled>
     </form>
     <p>Contador: <span id="cont">0</span></p>
-
 </body>
 
 </html>

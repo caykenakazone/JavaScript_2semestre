@@ -5,8 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        var vetImagens=["img1.jpg","img2.jpg","img3.jpg"];
+        var slidePos = 0;
+        function play(){
+            setInterval(mudarImg,1000);
+        }
+        function mudarImg() {
+            slidePos++
+            if(slidePos > vetImagens.length-1){
+                slidePos = 0
+            }
+            document.getElementById("slideShow").src = `img/${vetImagens[slidePos]}`
+            
+        }
+    </script>
 </head>
 <body>
-    
+
+    <form action="">
+        <input type="button" value="Iniciar" onclick="play()">
+    </form>
+    <img id="slideShow" src="img/img1.jpg" alt="">
 </body>
 </html>
