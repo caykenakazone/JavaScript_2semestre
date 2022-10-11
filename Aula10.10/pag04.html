@@ -8,8 +8,9 @@
     <script>
         var vetImagens=["img1.jpg","img2.jpg","img3.jpg"];
         var slidePos = 0;
+        var idCron;
         function play(){
-            setInterval(mudarImg,1000);
+            idCron=setInterval(mudarImg,1000);
         }
         function mudarImg() {
             slidePos++
@@ -19,13 +20,12 @@
             document.getElementById("slideShow").src = `img/${vetImagens[slidePos]}`
             
         }
+        function pausar(){
+            clearInterval(idCron);
+        }
     </script>
 </head>
-<body>
-
-    <form action="">
-        <input type="button" value="Iniciar" onclick="play()">
-    </form>
-    <img id="slideShow" src="img/img1.jpg" alt="">
+<body onload="play()">
+    <img id="slideShow" src="img/img1.jpg" alt="" onmouseenter="pausar()" onmouseleave="play()"> 
 </body>
 </html>
