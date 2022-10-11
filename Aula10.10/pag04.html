@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var vetImagens=["img1.jpg","img2.jpg","img3.jpg"];
         var slidePos = 0;
+        //var vetImagens=["img1.jpg","img2.jpg","img3.jpg"];
+        //var vetDescricoes = ["Descrição do produto1", "Descrição do produto2", "Descrição do produto3"]
+        var slideShow = [
+            { img: "img1.jpg", nome: "xiaomi", descricao: "Descrição do produto 1", valor:"R$ 1500,00" },
+            { img: "img2.jpg", nome: "samsung", descricao: "Descrição do produto 2", valor:"R$ 12500,00" },
+            { img: "img3.jpg", nome: "motorola", descricao: "Descrição do produto 3", valor:"R$ 345500,00" }
+
+        ]
         var idCron;
-        function play(){
-            idCron=setInterval(mudarImg,1000);
+        function play() {
+            idCron = setInterval(mudarImg, 1000);
         }
         function mudarImg() {
             slidePos++
-            if(slidePos > vetImagens.length-1){
+            if (slidePos > slideShow.length - 1) {
                 slidePos = 0
             }
-            document.getElementById("slideShow").src = `img/${vetImagens[slidePos]}`
-            
+            document.getElementById("slideShow").src = `img/${slideShow[slidePos].img}`;
+            document.getElementById("nome").innerHTML = slideShow[slidePos].nome;
+            document.getElementById("descricao").innerHTML = slideShow[slidePos].descricao;
+            document.getElementById("valor").innerHTML = slideShow[slidePos].valor;
+
         }
-        function pausar(){
+        function pausar() {
             clearInterval(idCron);
         }
     </script>
 </head>
+
 <body onload="play()">
-    <img id="slideShow" src="img/img1.jpg" alt="" onmouseenter="pausar()" onmouseleave="play()"> 
+    <img id="slideShow" src="img/img1.jpg" alt="" onmouseenter="pausar()" onmouseleave="play()">
+
+    <h2 id="nome">Xiaomi</h2>
+
+    <p id="descricao">Descrição do produto 1</p>
+
+    <h3 id="valor">R$ 1500,00</h3>
+
 </body>
+
 </html>
