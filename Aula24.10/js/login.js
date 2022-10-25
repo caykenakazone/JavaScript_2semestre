@@ -1,14 +1,16 @@
 function validar() {
-    usuario = document.getElementById("user").value
-    senha = document.getElementById("senha").value
+    usuario = document.getElementById("user")
+    senha = document.getElementById("senha")
 
-    if (usuario == "") {
-        alert("Usuário em branco")
+    if (usuario.value == "") {
+        alert("Usuário em branco");
+        usuario.focus();
     }
-    if (senha == "") {
-        alert("Senha em branco")
+    else if (senha.value == "") {
+        alert("Senha em branco");
+        senha.focus();
     }
-    if (usuario != "" && senha != "") {
+    else {
         alert("Sucesso")
     }
 }
