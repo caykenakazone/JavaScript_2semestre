@@ -1,16 +1,16 @@
 function validar() {
     usuario = document.getElementById("user")
-    senha = document.getElementById("senha")
+    pwd = document.getElementById("pwd")
 
     if (usuario.value == "") {
-        alert("Usuário em branco");
+        alertWifi("Usuário em branco! Favor preenchê-lo",false, 0,"../img/toupeira.gif", 30);
         usuario.focus();
     }
-    else if (senha.value == "") {
-        alert("Senha em branco");
+    else if (pwd.value == "") {
+        alertWifi("Senha em branco!", false, 0, "../img/toupeira.gif", 30);
         senha.focus();
     }
     else {
-        alert("Sucesso")
+        alertWifi("Login válido. Uhullll", false, 0, "../img/toupeira.gif", 30);
     }
 }
