@@ -10,12 +10,27 @@
         function conferir() {
             var valor = document.getElementById("txtValor").value;
             //Padrão válido telefone
-            // var padrao = /\d{4,5}-\d{4}/;
+            //var padrao = /^\d{4,5}-\d{4}$/;
 
+            //Padrão válido para telefone com DDD (34)99999-0000 ou (34)0000-3333
+            //var padrao = /^\(\d{2,3}\)\d{4,5}-\d{4}$/;
+            
+            //Padrão 
+
+
+            //Padrão cep
+            //var padrao = /^\d{2}\.\d{3}-\d{3}$/;
+            
             //Padrão deve começar com no mínimo dois dígitos
-            var padrao
+            //var padrao =/^\d\d/;
            
-            if (padrao.test(valor))
+            //Padrão deve terminar com 2 digitos
+            //var padrao = /\d{2}$/;
+            
+            //Padrão: deve ter exatamente dois dígitos
+           // var padrao = /^\d{2}$/;
+            
+           if (padrao.test(valor))
                 alert("Padrao valido")
             else
                 alert("Padrao invalido")
