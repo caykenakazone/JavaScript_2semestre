@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function conferir() {
+            function conferir() {
             var valor = document.getElementById("txtValor").value;
             //Padrão válido telefone
             //var padrao = /^\d{4,5}-\d{4}$/;
@@ -15,9 +15,23 @@
             //Padrão válido para telefone com DDD (34)99999-0000 ou (34)0000-3333
             //var padrao = /^\(\d{2,3}\)\d{4,5}-\d{4}$/;
             
-            //Padrão 
+            //Padrão para validar o número de matrícula. EX: TSPI-1234, onde TSPI pode ser LCO ou MKT, seguido de um traço + 4 a 5 números
+            //var padrao = /^(TSPI|LCO|MKT)-\d{4,5}$/;
 
+            //i depois da barra ignora letras maiusculas e minusculas
+            //var padrao = /^(TSPI|LCO|MKT)-\d{4,5}$/i;
 
+            //Padrao: IFTM Uberlãndia Centro ou IFTM       Uberlândia   Centro
+            //var padrao = /^IFTM\s{1,5}Uberlândia\s{1,5}Centro$/
+
+            //PAdrão para aceitar de 3 a 10 caracteres alfanumericos(Letras ou numeros)
+            //var padrao = /^\w{3,10}$/;
+
+            //Padrão para verificar todas as palavras compostas por um ou mais das seguintes letras : AEIOUBCDF
+            //var padrao = /^[aeioubcdf]{2,15}$/i;
+            
+             
+            
             //Padrão cep
             //var padrao = /^\d{2}\.\d{3}-\d{3}$/;
             
@@ -46,7 +60,7 @@
         </label>
         <input type="text" id="txtValor">
         <br><br>
-        <input type="button" value="Verificar" onclick="conferir()">
+        <input type="button" value="Verificar" id="btn" onclick="conferir()">
     </form>
 </body>
 
