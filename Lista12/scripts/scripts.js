@@ -33,7 +33,7 @@ function validar3(){
 //----------------------------------------------------//
 function validar4(){
     var valor4 = document.getElementById("v4").value;
-    var p4 = /(M|m)(T|t)-\d{2}\.\d{3}-(I|i)(F|f)(T|t)(M|m)}$/;
+    var p4 = /^(M|m)(T|t)-\d{2}.\d{3}-(I|i)(F|f)(T|t)(M|m)$/;
     
     if(p4.test(valor4)){
         alert("Ok")
