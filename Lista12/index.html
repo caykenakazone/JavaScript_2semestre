@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,62 +9,79 @@
     <script src="scripts/jwifi.js"></script>
     <script src="scripts/scripts.js"></script>
 </head>
+
 <body>
-    
+
     <span>A)</span>
-    <input type="text"value="23/07/2001" id="v1">
-    <input type="button"  value="Validar" onclick="validar1()">
+    <input type="text" value="23/07/2001" id="v1">
+    <input type="button" value="Validar" onclick="validar1()">
     <br><br>
+
     <span>B)</span>
     <input type="text" value="123.345.654-22" id="v2" onkeypress="inserirMascara('v2','999.999.999-23')">
     <input type="button" value="Validar" onclick="validar2()">
     <br><br>
+
     <span>C)</span>
+
     <input type="text" id="v3" value="IfTm-324/324-3r">
     <input type="button" value="Validar" onclick="validar3()">
     <br><br>
+
     <span>D)</span>
     <input type="text" id="v4" value="Mt-34.456-IfTm">
     <input type="button" value="Validar" onclick="validar4()">
     <br><br>
+
     <span>E)</span>
-    <input type="text" id="v5">
+    <input type="text" id="v5" value="MT-34.456-IfTm" onkeypress="inserirMascara('v5','MT-33.333-iFtm')">
     <input type="button" value="Validar" onclick="validar5()">
     <br><br>
+
     <span>F)</span>
-    <input type="text" id="v6">
+    <input type="text" id="v6" value="M t-34.456-I f T m">
     <input type="button" value="Validar" onclick="validar6()">
     <br><br>
+
     <span>G)</span>
-    <input type="text" id="v7">
+    <input type="text" id="v7" value="M t-34.456-I f T m Uberlandia Centro">
     <input type="button" value="Validar" onclick="validar7()">
     <br><br>
+
     <span>H)</span>
-    <input type="text" id="v8">
+    <input type="text" id="v8" value="IFTM campus
+    Uberlândia Centro.">
     <input type="button" value="Validar" onclick="validar8()">
     <br><br>
+
     <span>I)</span>
-    <input type="text" id="v9">
+    <input type="text" id="v9" value="+R3(34)33333-3333" onkeypress="inserirMascara('v9','+yy(xx)xxxxx-xxxx')">
     <input type="button" value="Validar" onclick="validar9()">
     <br><br>
+
     <span>J)</span>
-    <input type="text" id="v10">
+    <input type="text" id="v10" value="(034)33333-3333">
     <input type="button" value="Validar" onclick="validar10()">
     <br><br>
+
     <span>K)</span>
-    <input type="text" id="v11">
+    <input type="text" id="v11" value="1,34">
     <input type="button" value="Validar" onclick="validar11()">
     <br><br>
+
     <span>L)</span>
-    <input type="text" id="v12">
+    <input type="text" id="v12" value="R$ 10.524.478.967,70">
     <input type="button" value="Validar" onclick="validar12()">
     <br><br>
+
     <span>M)</span>
-    <input type="text" id="v13">
+    <input type="text" id="v13" value="22:45:37:89">
     <input type="button" value="Validar" onclick="validar13()">
     <br><br>
+
     <span>N)</span>
     <input type="text" id="v14">
     <input type="button" value="Validar" onclick="validar14()">
 </body>
+
 </html>
