@@ -5,19 +5,18 @@
 
 #tabuleiro {
     width: 600px;
-    border: 1px solid black;
+    border: 3px solid black;
     overflow: auto;
-    background-color: black;
+    background-color: rgb(241, 249, 250);
 }
 
 
 .boxTabuleiro {
     width: 33.33%;
     height: 200px;
-    color: white;
-    border: 1px solid white;
+    border: 3px solid rgb(110, 76, 76);
     float: left;
-    background-color: rgb(76, 76, 76);
+    background-color: rgb(44, 43, 43);
 }
 
 .boxTabuleiro:hover {
@@ -28,7 +27,7 @@
     background: no-repeat;
 }
 
-.imagXis{
+.imgXis {
     background-image: url('../img/x.png');
 }
 .imgCircle{
