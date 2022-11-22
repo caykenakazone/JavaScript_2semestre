@@ -35,8 +35,8 @@ function inserirImg(evento) {
     matriz[parseInt(vetIndices[0])][parseInt(vetIndices[1])] = imgAtual;
     (imgAtual >= 1) ? imgAtual = 0 : imgAtual++;
 
-    checkGanhador();
+       
 }
-checkGanhador(){
+function checkGanhador() {
     
 }
