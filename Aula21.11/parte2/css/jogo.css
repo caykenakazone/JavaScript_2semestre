@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#tabuleiro {
+    width: 600px;
+    border: 1px solid black;
+    overflow: auto;
+    background-color: black;
+}
+
+
+.boxTabuleiro {
+    width: 33.33%;
+    height: 200px;
+    color: white;
+    border: 1px solid white;
+    float: left;
+    background-color: rgb(76, 76, 76);
+}
+
+.boxTabuleiro:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+.imgTabuleiro{
+    background: no-repeat;
+}
+
+.imagXis{
+    background-image: url('../img/x.png');
+}
+.imgCircle{
+    background-image: url('../img/0.png');
+}
