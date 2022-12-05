@@ -1,3 +1,9 @@
+var veiculos = [{
+    imgVeiculo:"civic.jpg", fabricante: "Fabricante: Honda", nomeC: "Nome: Civic", potencia: "Potência: 150 cv", garantia: "Garantia: 3 anos", consumo: "Consumo: 9, 7 km / l"
+}, {
+    imgVeiculo: "troller.jpg", fabricante: "Fabricante: Jeep", nomeC: "Nome: Troller", potencia: "Potência: 190 cv", garantia: "Garantia: 3 anos", consumo: "Consumo: 7, 7 km / l"
+}
+]
 function validaCampos() {
     nome = document.getElementById("nome").value
     idade = document.getElementById("idade").value
@@ -34,22 +40,20 @@ function cronometro(numAleat) {
 
 
 function carros() {
-    var veiculos = [{
-        imgVeiculo: "civic.jpg", fabricante: "Fabricante: Honda", nomeC: "Nome: Civic", potencia: "Potência: 150 cv", garantia: "Garantia: 3 anos", consumo: "Consumo: 9, 7 km / l"
-    }, {
-        imgVeiculo: "troller.jpg", fabricante: "Fabricante: Jeep", nomeC: "Nome: Troller", potencia: "Potência: 190 cv", garantia: "Garantia: 3 anos", consumo: "Consumo: 7, 7 km / l"
-    }
-    ]
+    
     nome = localStorage.getItem("nome");
     passatempo = parseInt(localStorage.getItem("passatempo"));
     document.getElementById("nomeUlt").innerHTML = nome
 
-    document.getElementById("imgCarro".src = `../img/${veiculos[passatempo].imgVeiculo}`)
-        document.getElementById("fabri").innerHTML = veiculos[passatempo].fabricante
-        document.getElementById("marca").innerHTML = veiculos[passatempo].nomeC
+    document.getElementById("imgVeiculo".src = `../img/${veiculos[passatempo].imgVeiculo}`)
+    document.getElementById("fabri").innerHTML = veiculos[passatempo].fabricante
+    document.getElementById("marca").innerHTML = veiculos[passatempo].nomeC
     document.getElementById("pot").innerHTML = veiculos[passatempo].potencia
     document.getElementById("garant").innerHTML = veiculos[passatempo].garantia
     document.getElementById("cons").innerHTML = veiculos[passatempo].consumo
 
 
+}
+function mudarPerfil(){
+    window.open("index.html","_self");
 }

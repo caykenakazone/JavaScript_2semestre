@@ -5,7 +5,7 @@
 
 #tabuleiro {
     width: 600px;
-    border: 3px solid black;
+    box-shadow: 0px 0px 50px rgb(81, 81, 203);
     overflow: auto;
     background-color: rgb(241, 249, 250);
 }
@@ -14,22 +14,24 @@
 .boxTabuleiro {
     width: 33.33%;
     height: 200px;
-    border: 3px solid rgb(110, 76, 76);
+    border: 10px solid rgb(113, 72, 180);
     float: left;
-    background-color: rgb(44, 43, 43);
+
 }
 
 .boxTabuleiro:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: rgb(135, 135, 135);
 }
-.imgTabuleiro{
+
+.imgTabuleiro {
     background: no-repeat;
 }
 
 .imgXis {
     background-image: url('../img/x.png');
 }
-.imgCircle{
+
+.imgCircle {
     background-image: url('../img/0.png');
 }
