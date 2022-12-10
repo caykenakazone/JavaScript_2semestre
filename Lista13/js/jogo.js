@@ -52,11 +52,18 @@ function inserirImg(evento) {
 function checkGanhador() {
     possi = [("000"), ("111")]
     linha1 = matriz[0][0] + matriz[0][1] + matriz[0][2];
-    if (linha1 == "000") alert("Jogador 1 Ganhou : Circulo");
+    linha2 = matriz[1][0] + matriz[1][1] + matriz[2][2];
+    linha3 = matriz[2][0] + matriz[2][1] + matriz[2][2];
+    if (linha1 == "000") alertWifi("Jogador 1 ganhou", false, 0, "img/velha.png", 30);
     else if (linha1 == "111") alert("Jogador 2 Ganhou : Xis");
+    else if (linha2 == "000") alert("Jogador 1 Ganhou : Xis");
+    else if (linha2 == "111") alert("Jogador 2 Ganhou : Xis");
     for (var i = 0; i < 3; i++) {
         for (var j = 0; j < 3; j++) {
-
+            l = matriz[0][0] + matriz[0][1] + matriz[0][2]
+            if(l=="000"||l=="111"){
+                
+            }
         }
     }
 }
