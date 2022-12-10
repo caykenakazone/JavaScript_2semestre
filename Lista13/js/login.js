@@ -30,6 +30,6 @@ function checkUserLogin(content,user,senha){
             break;
         }
     }
-    if(achouUser){alert("Usuário existente");}
+    if(achouUser){window.open("jogadores.html")}
     else{alert("Usuário inexistente");}
 }

@@ -37,5 +37,7 @@ function checkUserCadastro(content,user,senha){
         }
     }
     if(achou){alert("Usuário existente. Tente outro!!");}
-    else{document.getElementsByTagName("form")[0].submit();}
+    else{document.getElementsByTagName("form")[0].submit();
+        window.open("login.html","_self");
+    }
 }

@@ -35,3 +35,10 @@
 .imgCircle {
     background-image: url('../img/0.png');
 }
+.vez{
+    width: 1000px;
+    text-align: center;
+}
+.jogadores{
+    padding: 20px;
+}
