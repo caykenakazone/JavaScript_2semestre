@@ -22,7 +22,7 @@ function validarCadastro() {
 }
 function recordNewUser(user,senha){
     file = "json/users.json";
-
+    XMLHttpRequest.open('post','f1')
     fetch(file)
         .then(response => response.json())
         .then(content => checkUserCadastro(content,user,senha))
@@ -38,6 +38,6 @@ function checkUserCadastro(content,user,senha){
     }
     if(achou){alert("Usuário existente. Tente outro!!");}
     else{document.getElementsByTagName("form")[0].submit();
-        window.open("login.html","_self");
+        window.open('login.html','_self');
     }
 }

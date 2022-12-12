@@ -13,9 +13,9 @@ function validarLogin() {
     }else{loginProcess(user,senha);}
 }
 function loginProcess(user,senha){
-    file = "json/users.json";
+    file2 = "json/users.json";
 
-    fetch(file)
+    fetch(file2)
         .then(response => response.json())
         .then(content => checkUserLogin(content,user,senha))
         .catch(err => alert("Problemas na leitura do JSON!"));
@@ -30,6 +30,6 @@ function checkUserLogin(content,user,senha){
             break;
         }
     }
-    if(achouUser){window.open("jogadores.html")}
+    if(achouUser){window.open('jogadores.html','_self')}
     else{alert("Usuário inexistente");}
 }
