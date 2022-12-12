@@ -1,7 +1,7 @@
 <?php
     
     $user = $_POST['user'];
-    $senha = $_GET['senha'];
+    $senha = $_POST['senha'];
     $record = array("user"=>$user,"senha"=>$senha);
 
     $registros = json_decode(file_get_contents("../json/users.json"),true);

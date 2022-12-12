@@ -22,7 +22,7 @@ function validarCadastro() {
 }
 function recordNewUser(user,senha){
     file = "json/users.json";
-    XMLHttpRequest.open('post','f1')
+
     fetch(file)
         .then(response => response.json())
         .then(content => checkUserCadastro(content,user,senha))
